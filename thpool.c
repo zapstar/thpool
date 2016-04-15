@@ -79,7 +79,7 @@ static task_t *task_queue_pull(task_queue_t *queue) {
  * @param  arg The thread pool handler
  * @return     NULL
  */
-static void *thpool_thread(void *arg) {
+static void * thpool_thread(void *arg) {
     task_t *task;
     thpool_t *pool = (thpool_t *) arg;
     for (;;) {
