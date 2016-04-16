@@ -154,6 +154,9 @@ thpool_t *thpool_create(int size) {
         goto error_c3;
     }
 
+    /* Set the pool size to zero, initially */
+    pool->size = 0;
+
     /* Finally create the threads */
     pthread_mutex_lock(&pool->pool_mutex);
     for (i = 0; i < size; i++) {
